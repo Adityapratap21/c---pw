@@ -3,7 +3,7 @@
 using namespace std;
 int main(){
    int arr[6] = {5,-4,0,3,26,1};
-   int n = 6;
+   int n = 6;//n=6
    for(int i=0;i<n;i++){
     cout<<arr[i]<<" ";
    }
