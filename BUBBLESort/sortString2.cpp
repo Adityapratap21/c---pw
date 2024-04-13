@@ -12,7 +12,7 @@ int main(){
     cout<<str<<endl;
     for(int i =0;i<str.size()-1;i++){
         int flag = 0;
-        for(int j = str.size()-1-i;j>=0;j--){
+        for(int j = str.size()-1-i;j>0;j--){
             if(str[j]>str[j-1]){
                 swap(str[j],str[j- 1]);
                 flag = 1;

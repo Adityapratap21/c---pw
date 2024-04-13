@@ -1,28 +1,25 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 int main(){
     int t;
     cin>>t;
-    for(int i = 1;i<=t;i++){
+    while(t--){
         int n;
         cin>>n;
-        vector<int> a(n);
-        for(int j = 0;j<n;j++){
-            int b ;
-            cin>>b;
-            if(b<=n){
-                a[i] = b;
-            }
+        vector<int>arr(n);
+        for(int i=0;i<n;i++){
+            cin>>arr[i];
         }
-        int count = 0;
-        for(int k=0;k<n;k++){
-            for(int l = k+1;l<n;l++){
-                if((a[l]-a[k])==(l-k)){
-                    count++;
-                }
-            }
-        }
-        cout<<count<<endl;
 
-    }
+        long long cnt=0;
+
+            for(int j=n-1;j>0;j--){
+            for(int i=0;i<j;i++){
+             if((arr[j]-j)==(arr[i]-i)) cnt++;
+            }
+            }
+          cout<<cnt<<endl;
+
+        }
+
 }
