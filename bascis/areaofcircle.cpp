@@ -11,7 +11,7 @@ int main(){
             if(v[i]%v[i-1]==0){
                 v[i-1]++;
                 if(i>1 && v[i-1]==v[i-2]) v[i-1]++;
-                 if(v[i]==v[i-1]) v[i-1]++;
+                 if(v[i]%v[i-1]==0) v[i-1]++;
             }
         }
         for(int i=0;i<n;i++) cout<<v[i]<<" ";
